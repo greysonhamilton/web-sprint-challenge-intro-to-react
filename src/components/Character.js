@@ -1,17 +1,45 @@
 import React from "react";
-import Styled from "./Styled";
+import styled from "styled-components";
+
+const Stats = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40%;
+    `;
+
+const Name = styled.h2`
+
+    color: black;
+    font-family: 'Poller One', cursive;
+    text-shadow: 3px 8px white;
+    `;
+
+const Info = styled.p`
+
+    color: white;
+    text-shadow: 0 2px black;
+`;
+
+
 
 const Character = (props) => {
+
   return (
-    <div className="character">
-        <h2>Name: {props.name}</h2>
-      <p>Birth Year: {props.birth_year}</p>
-      <p>Height: {props.height}</p>
-      <p>Mass: {props.mass}</p>
-      <p>Gender: {props.gender}</p>
-      <p>Eye Color: {props.eye_color}</p>
-      <p>Hair Color: {props.hair_color}</p>
-    </div>
+
+    <Stats>
+        <Name>Name: {props.name}</Name>
+        <Info>Birth Year: {props.birth_year}</Info>
+        <Info>Height: {props.height}</Info>
+        <Info>Mass: {props.mass}</Info>
+        <Info>Gender: {props.gender}</Info>
+        <Info>Eye Color: {props.eye_color}</Info>
+        <Info>Hair Color: {props.hair_color}</Info>
+    </Stats>
+  
   );
+
 };
+
 export default Character
