@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Character from "./Components/Character";
+import Character from "./components/Character";
+import "./App.css";
+import Styled from "./components/Styled";
 
 const App = () => {
   const [id, setId] = useState([]);
@@ -24,17 +26,17 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">A Star War</h1>
-      {id.map((star) => {
+      {id.map((people) => {
         return (
           <Character
-            key={star.name}
-            name={star.name}
-            birth_year={star.birth_year}
-            height={star.height}
-            mass={star.mass}
-            eye-color={star.eye_color}
-            hair_color={star.hair_color}
-            gender={star.gender}
+            key={people.name}
+            name={people.name}
+            birth_year={people.birth_year}
+            height={people.height}
+            mass={people.mass}
+            eye-color={people.eye_color}
+            hair_color={people.hair_color}
+            gender={people.gender}
           />
         );
       })}
